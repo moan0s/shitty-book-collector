@@ -6,6 +6,7 @@ import requests
 def write_html(df, filename, css=None):
     books_as_html = df[["Titel ", "Autor*in", "Sprache", "Kategorie"]].to_html()
     with open(filename, "w", encoding="utf-8") as file:
+        file.writelines('<!DOCTYPE html>\n')
         file.writelines('<head>\n')
         file.writelines('<meta charset="UTF-8">\n')
         if css:
