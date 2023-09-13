@@ -19,7 +19,7 @@ def write_html(df, filename, css=None):
 
 def cli():
     parser = argparse.ArgumentParser(description='Convert an odt document to a book')
-    parser.add_argument('-i', '--input-file', help="The input file (odf format)")
+    parser.add_argument('-i', '--input', help="The input file (odf format)")
     parser.add_argument('-o', '--output', help="Filename where to export the html table to")
     parser.add_argument('--healthcheck', help="[Optional] Healthcheck URL")
     parser.add_argument('--css', help="[Optional] relative css file location")
